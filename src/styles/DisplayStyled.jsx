@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const DisplayContainer = styled.div`
     position: absolute;
-    top: 116px;
+    top: 6rem;
     background-color: black;
     width: 20.625rem;
     border: 2px solid #47476b;
@@ -12,7 +12,7 @@ const DisplayContainer = styled.div`
 `
 
 const DisplayValuesStyled = styled.div`
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     font-family: digital;
     color: white;
     text-align: right;

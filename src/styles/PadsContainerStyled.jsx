@@ -8,7 +8,7 @@ export const Pads = styled.div`
     width: 320px;
     position: relative;
 `
-const NumberKey = styled.button`
+export const NumberKey = styled.button`
     background-color: #4d4d4d;
     color: white;
     outline: 1px solid black;
@@ -24,7 +24,7 @@ const NumberKey = styled.button`
     }
 `
 
-const SymbolKey = styled.button`
+export const SymbolKey = styled.button`
     background-color: #666666;
     color: white;
     font-size: 1.2rem;
@@ -40,7 +40,7 @@ const SymbolKey = styled.button`
     }
 `
 
-const ResetKey = styled.button`
+export const ResetKey = styled.button`
     background-color: #ac3939;
     width: 10rem;
     font-size: 1.2rem;
@@ -56,7 +56,7 @@ const ResetKey = styled.button`
         z-index: 3;
     }
 `
-const CeroKey = styled.button`
+export const CeroKey = styled.button`
     background-color: #4d4d4d;
     width: 10rem;
     font-size: 1.2rem;
@@ -73,7 +73,7 @@ const CeroKey = styled.button`
     }
 `
 
-const EqualKey = styled.button`
+export const EqualKey = styled.button`
     font-size: 1.2rem;
     color: white;
     outline: 1px solid black;
@@ -92,8 +92,3 @@ const EqualKey = styled.button`
         z-index: 3;
     }
 `
-export const NumberKeyStyled = ({value}) => <NumberKey>{value}</NumberKey>
-export const SymbolKeyStyled = ({value}) => <SymbolKey>{value}</SymbolKey>
-export const ResetKeyStyled = ({value}) => <ResetKey>{value}</ResetKey>
-export const CeroKeyStyled = ({value}) => <CeroKey>{value}</CeroKey>
-export const EqualKeyStyled = ({value}) => <EqualKey>{value}</EqualKey>
