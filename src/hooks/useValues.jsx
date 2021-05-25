@@ -26,11 +26,12 @@ const useValues = () => {
         });
       };
     
-      const handleFinalResult = (item) =>{
+      const handleFinalResult = (item) =>{ 
         setDisplayValues((previousState)=>{
           return{
             ...previousState,
-            formDisplay: `${formDisplay}=${eval(formDisplay.toString())}`
+            formDisplay: `${eval(formDisplay.toString())}`,
+            numberDisplay: `${eval(formDisplay.toString())}`
           };
         });
       };

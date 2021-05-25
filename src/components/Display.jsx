@@ -33,7 +33,9 @@ const Display = () => {
         <NumberKey
           onClick={(item) => {
             handleChangeValues(9);
-          }}> 7 </NumberKey>
+          }}
+          onKeyDown
+          > 7 </NumberKey>
         
         <NumberKey
           onClick={(item) => {
