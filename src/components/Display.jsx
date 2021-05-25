@@ -1,47 +1,16 @@
-import React, { useState } from "react";
-import { DisplayContainer, DisplayValuesStyled } from "../styles/DisplayStyled";
+import React from "react";
+import { DisplayContainer, DisplayResultsStyled, DisplayValuesStyled } from "../styles/DisplayStyled";
 import {CeroKey, EqualKey, NumberKey, Pads, ResetKey, SymbolKey} from "../styles/PadsContainerStyled";
+import useValues from "../hooks/useValues.jsx";
 
 const Display = () => {
   
-  const [displayValues, setDisplayValues] = useState({
-    formDisplay: "",
-    numberDisplay: 0,
-    finalResult: 0,
-  });
-
-  const { formDisplay, numberDisplay, finalResult } = displayValues;
-
-  const handleResetDisplay = () => {
-    setDisplayValues({
-      formDisplay: " ",
-      numberDisplay: 0,
-    });
-  };
-
-  const handleChangeValues = (item) => {
-    setDisplayValues((previousState) => {
-      return {
-        ...previousState,
-        formDisplay: `${formDisplay + item}`,
-        numberDisplay: item,
-        finalResult: "wait"
-      };
-    });
-  };
-
-  const handleFinalResult = (item) =>{
-    setDisplayValues((previousState)=>{
-      return{
-        ...previousState,
-        formDisplay: `${formDisplay}=${finalResult }`
-      };
-    });
-  };
+  const [formDisplay, numberDisplay, handleResetDisplay, handleChangeValues, 
+    handleFinalResult] = useValues();
 
   return (
     <DisplayContainer>
-      <DisplayValuesStyled>{`${formDisplay}`}</DisplayValuesStyled>
+      <DisplayResultsStyled>{`${formDisplay}`}</DisplayResultsStyled>
       <DisplayValuesStyled>{`${numberDisplay}`}</DisplayValuesStyled>
       <Pads>
         <ResetKey

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Pads = styled.div`
-    border: 2px solid #47476b;
+    border: 0 solid #47476b;
     border-top: none;
     padding: 5px;
     background: black;
