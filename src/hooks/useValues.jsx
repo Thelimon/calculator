@@ -5,10 +5,9 @@ const useValues = () => {
     const [displayValues, setDisplayValues] = useState({
         formDisplay: "",
         numberDisplay: 0,
-        finalResult: 0,
       });
     
-      const { formDisplay, numberDisplay, finalResult } = displayValues;
+      const { formDisplay, numberDisplay} = displayValues;
     
       const handleResetDisplay = () => {
         setDisplayValues({
@@ -23,7 +22,6 @@ const useValues = () => {
             ...previousState,
             formDisplay: `${formDisplay + item}`,
             numberDisplay: item,
-            finalResult: "wait"
           };
         });
       };
@@ -32,7 +30,7 @@ const useValues = () => {
         setDisplayValues((previousState)=>{
           return{
             ...previousState,
-            formDisplay: `${formDisplay}=${finalResult}`
+            formDisplay: `${formDisplay}=${eval(formDisplay.toString())}`
           };
         });
       };
