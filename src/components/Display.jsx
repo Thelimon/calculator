@@ -27,7 +27,7 @@ const Display = () => {
 
         <SymbolKey
           onClick={(item) => {
-            handleChangeValues("X");
+            handleChangeValues("*");
           }}> X </SymbolKey>
 
         <NumberKey
